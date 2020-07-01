@@ -21,12 +21,21 @@
 # print(part_two)
 
 """experimenting with sorted method"""
-print(sorted(part_one))
-print(sorted(part_two))
+# print(sorted(part_one))
+# print(sorted(part_two))
 
-# T = int(input())
-# while T>=1 & T<=100:
-#     if input_string == palindrome:
-#         print('YES')
-#     else:
-#         print('NO')
+"""Using Standard input of Python 3
+    variables are based on CodeChef palindrome question
+"""
+T = int(input())
+while T in range(1,100):
+    for S in range(2,1000):
+        S = input()
+        s_length = len(S)
+        part_one = S[0:s_length//2 if s_length%2 == 0 else ((s_length//2) + 1)]
+        part_two = S[s_length//2:]
+        if sorted(part_one) == sorted(part_two):
+            # using string comprehension; split the string, handle if length is an odd number
+            print('YES')
+        else:
+            print('NO')
