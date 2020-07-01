@@ -15,8 +15,8 @@
 # string_length = len(test_string)
 # print (string_length)
 # # using string comprehension; split the string, handle if length is an odd number
-# part_one = test_string[0:string_length//2 if string_length%2 == 0 else ((string_length//2) + 1)]
-# part_two = test_string[string_length//2:]
+# part_one = test_string[0:string_length//2]
+# part_two = test_string[string_length//2 if string_length%2 == 0 else ((string_length//2) + 1):]
 # print(part_one)
 # print(part_two)
 
@@ -26,8 +26,31 @@
 
 """Using Standard input of Python 3
     variables are based on CodeChef palindrome question
+    *DISCLAIMER: only valid if odd numbers, when splitted, the middle char get included to both sides*
 """
+# T = range(1, 100)
+# std_input = int(input())
+# if std_input in T:
+#     for looping_program in range(std_input):
+#         S = range(2, 1000)
+#         string_input = input()
+#         string_input_length = len(string_input)
+#         if string_input_length in S:
+#             part_one = string_input[0:string_input_length//2 if string_input_length%2 == 0 else ((string_input_length//2) + 1)]
+#             part_two = string_input[string_input_length//2:]
+#             if sorted(part_one) == sorted(part_two):
+#                 # using string comprehension; split the string, handle if length is an odd number
+#                 print('YES')
+#             else:
+#                 print('NO')
+#         else:
+#             break
 
+"""Using Standard input of Python 3
+    variables are based on CodeChef palindrome question
+    must check if string has uppercase letter, if yes break
+    *DISCLAIMER: only valid if odd numbers, when splitted, the middle char get excluded*
+"""
 T = range(1, 100)
 std_input = int(input())
 if std_input in T:
@@ -35,9 +58,9 @@ if std_input in T:
         S = range(2, 1000)
         string_input = input()
         string_input_length = len(string_input)
-        if string_input_length in S:
-            part_one = string_input[0:string_input_length//2 if string_input_length%2 == 0 else ((string_input_length//2) + 1)]
-            part_two = string_input[string_input_length//2:]
+        if ((string_input_length in S) and (all(((ord(char) < 123) and (ord(char) > 96)) for char in string_input)) and (string_input.islower() == True)):
+            part_one = string_input[0:string_input_length//2]
+            part_two = string_input[string_input_length//2 if string_input_length%2 == 0 else ((string_input_length//2) + 1):]
             if sorted(part_one) == sorted(part_two):
                 # using string comprehension; split the string, handle if length is an odd number
                 print('YES')
