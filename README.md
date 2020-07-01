@@ -7,9 +7,11 @@ Your task is simple. Given a string, you need to tell if it is a lapindrome.
 
 ### Input:
 First line of input contains a single integer T, the number of test cases.
-Each test is a single line containing a string S composed of only lowercase English alphabet.
+Each test is:
+    - a single line containing a string S composed of:
+        - only `lowercase English alphabet`.
 Output:
-For each test case, output on a separate line: "YES" if the string is a lapindrome and "NO" if it is not.
+For each test case, output on a separate line: `"YES"` if the string is a lapindrome and `"NO"` if it is not.
 
 ### Constraints:
 1 ≤ T ≤ 100
