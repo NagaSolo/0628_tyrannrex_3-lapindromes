@@ -27,15 +27,21 @@
 """Using Standard input of Python 3
     variables are based on CodeChef palindrome question
 """
-T = int(input())
-while T in range(1,100):
-    for S in range(2,1000):
-        S = input()
-        s_length = len(S)
-        part_one = S[0:s_length//2 if s_length%2 == 0 else ((s_length//2) + 1)]
-        part_two = S[s_length//2:]
-        if sorted(part_one) == sorted(part_two):
-            # using string comprehension; split the string, handle if length is an odd number
-            print('YES')
+
+T = range(1, 100)
+std_input = int(input())
+if std_input in T:
+    for looping_program in range(std_input):
+        S = range(2, 1000)
+        string_input = input()
+        string_input_length = len(string_input)
+        if string_input_length in S:
+            part_one = string_input[0:string_input_length//2 if string_input_length%2 == 0 else ((string_input_length//2) + 1)]
+            part_two = string_input[string_input_length//2:]
+            if sorted(part_one) == sorted(part_two):
+                # using string comprehension; split the string, handle if length is an odd number
+                print('YES')
+            else:
+                print('NO')
         else:
-            print('NO')
+            break
