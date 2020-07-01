@@ -14,7 +14,7 @@ string_length = len(test_string)
 print (string_length)
 # using string comprehension; split the string
 part_one = test_string[0:string_length//2 if string_length%2 == 0 else ((string_length//2) + 1)]
-part_two = test_string[string_length//2 if string_length%2 == 0 else ((string_length//2) + 1):]
+part_two = test_string[string_length//2:]
 print(part_one)
 print(part_two)
 
