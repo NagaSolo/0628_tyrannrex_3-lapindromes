@@ -63,8 +63,12 @@ if std_input in T:
             part_two = string_input[string_input_length//2 if string_input_length%2 == 0 else ((string_input_length//2) + 1):]
             if sorted(part_one) == sorted(part_two):
                 # using string comprehension; split the string, handle if length is an odd number
+                print(sorted(part_one))
+                print(sorted(part_two))
                 print('YES')
             else:
+                print(sorted(part_one))
+                print(sorted(part_two))
                 print('NO')
         else:
             break

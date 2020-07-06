@@ -19,7 +19,7 @@ For each test case, output on a separate line: `"YES"` if the string is a lapind
 
 ### Example:
 
-### Input:
+##### Input:
 6
 gaga
 abcde
@@ -29,7 +29,7 @@ abbaab
 ababc
 
 
-### Output:
+##### Output:
 YES
 NO
 YES
