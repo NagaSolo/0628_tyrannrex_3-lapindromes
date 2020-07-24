@@ -27,7 +27,12 @@ def palindrome(a_string):
         else:
             return False
 
+# functional paradigms
+palindrome_functional = lambda x: list(x) == list(reversed(x))
+
 # driver
 if __name__ == '__main__':
     string_input = input()
     print(palindrome(string_input))
+    # print(list(reversed(string_input)))
+    print(palindrome_functional(string_input))
