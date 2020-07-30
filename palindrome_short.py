@@ -18,6 +18,7 @@
 #     else:
 #         return 'NO'
 
+# using if else inside lambda
 palindrome = lambda input_string: sorted(input_string[:len(input_string)//2]) == sorted(input_string[len(input_string)//2:]) if (len(input_string)%2 == 0) else sorted(input_string[:len(input_string)//2]) == sorted(input_string[(len(input_string)//2)+1:])
 
 # driver
