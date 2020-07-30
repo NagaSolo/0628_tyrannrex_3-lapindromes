@@ -18,7 +18,7 @@
 #     else:
 #         return 'NO'
 
-palindrome = lambda input_string: sorted(input_string[:len(input_string)//2]) == sorted(input_string[len(input_string)//2:])
+palindrome = lambda input_string: sorted(input_string[:len(input_string)//2]) == sorted(input_string[len(input_string)//2:]) if (len(input_string)%2 == 0) else sorted(input_string[:len(input_string)//2]) == sorted(input_string[(len(input_string)//2)+1:])
 
 # driver
 if __name__ == '__main__':
